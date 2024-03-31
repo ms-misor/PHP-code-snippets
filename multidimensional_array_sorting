@@ -1,1 +1,20 @@
+<?php
 
+// Sample multidimensional array
+$students = array(
+    array('name' => 'John', 'age' => 20),
+    array('name' => 'Alice', 'age' => 25),
+    array('name' => 'Bob', 'age' => 22)
+);
+
+// Get a list of ages to use for sorting
+$ages = array_column($students, 'name');
+
+// Sort the students array based on age
+array_multisort($ages, SORT_ASC, $students);
+
+// Display the sorted array
+print_r($students);
+
+
+?>
